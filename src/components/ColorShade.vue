@@ -32,7 +32,7 @@ const hsl = computed(() => {
   <div class="flex-none w-32 p-2 rounded relative" :style="{ backgroundColor: value }">
     <div :class="parseInt(shade) > 500 ? 'text-white' : 'text-black'">
       <div class="font-medium">{{ shade }}</div>
-      <div class="text-xs space-y-0.5 font-mono">
+      <div class="text-xs font-mono">
         <ColorValue :value="value" @copy="copyToClipboard" />
         <ColorValue v-if="rgb" :value="rgb" @copy="copyToClipboard" />
         <ColorValue v-if="hsl" :value="hsl" @copy="copyToClipboard" />
